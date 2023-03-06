@@ -85,4 +85,9 @@ const returnArray = newArray.splice(0, 6).sort((a, b) => {
   return a.uuid - b.uuid;
 });
 
-console.log(returnArray);
+returnArray.forEach((element) => {
+  console.log(
+    `{ uuid: ${element.uuid}, role: ${element.role}, name: ${element.name} }`
+  );
+});
+//console.log(returnArray);
