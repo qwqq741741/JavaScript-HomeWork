@@ -11,18 +11,18 @@ const itemsObject = [
   { quantity: 5, price: 400 },
 ];
 
-const double = itemsObject.map((ele) => {
-  return [ele.quantity * 2, ele.price * 2];
+const double = itemsObject.map(({ quantity, price }) => {
+  return { quantity: quantity * 2, price: price * 2 };
 });
 console.log(double);
 
-const greater = itemsObject.filter((ele) => {
-  return ele.quantity > 2 && ele.price > 300;
+const greater = itemsObject.filter(({ quantity, price }) => {
+  return quantity > 2 && price > 300;
 });
 console.log(greater);
 
-const totalValue = itemsObject.reduce((acc, ele) => {
-  return acc + ele.price * ele.quantity;
+const totalValue = itemsObject.reduce((acc, { price, quantity }) => {
+  return acc + price * quantity;
 }, 0);
 console.log(totalValue);
 
