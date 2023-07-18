@@ -37,7 +37,7 @@ const tableInfo = {
 const tbl = document.createElement("table");
 tbl.setAttribute("id", "onetable");
 const question1 = document.getElementById("q1");
-question1.appendChild(tbl);
+
 function generateTableHead(table, data) {
   let thead = table.createTHead();
   let row = thead.insertRow();
@@ -63,6 +63,7 @@ let data = Object.values(tableInfo.tableContent);
 
 generateTableHead(tbl, tableInfo.tableHeader);
 generateTableBody(tbl, data);
+question1.appendChild(tbl);
 
 const newButton = document.getElementById("button1");
 function addNewDataintoTable() {
